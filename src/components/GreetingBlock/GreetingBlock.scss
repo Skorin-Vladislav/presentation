@@ -1,0 +1,17 @@
+.container {
+  min-width: 100%;
+  background-color: black;
+  margin: auto;
+}
+.animated-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1#words {
+  font-weight: 700;
+  font-size: 5em;
+  color: whitesmoke;
+}
