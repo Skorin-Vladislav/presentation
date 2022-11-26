@@ -2,51 +2,51 @@ import React from "react";
 import "./SkillsBlock.scss";
 function SkillsBlock() {
   return (
-    <div class="skills-container">
-      <div class="images"></div>
-      <div class="skills-box">
-        <h1 class="heading-skills">My skills</h1>
+    <div className="skills-container">
+      <div className="images"></div>
+      <div className="skills-box">
+        <h1 className="heading-skills">My skills</h1>
 
-        <div class="skills-list">
-          <div class="skill">
-            <h2 class="skill-name">SASS</h2>
-            <div class="bar">
-              <div class="progress80"></div>
+        <div className="skills-list">
+          <div className="skill">
+            <h2 className="skill-name">SASS</h2>
+            <div className="bar">
+              <div className="progress80"></div>
             </div>
           </div>
 
-          <div class="skill">
-            <h2 class="skill-name">JavaScript</h2>
-            <div class="bar">
-              <div class="progress70"></div>
+          <div className="skill">
+            <h2 className="skill-name">JavaScript</h2>
+            <div className="bar">
+              <div className="progress70"></div>
             </div>
           </div>
 
-          <div class="skill">
-            <h2 class="skill-name">React</h2>
-            <div class="bar">
-              <div class="progress50"></div>
+          <div className="skill">
+            <h2 className="skill-name">React</h2>
+            <div className="bar">
+              <div className="progress50"></div>
             </div>
           </div>
 
-          <div class="skill">
-            <h2 class="skill-name">Mongoose</h2>
-            <div class="bar">
-              <div class="progress50"></div>
+          <div className="skill">
+            <h2 className="skill-name">Mongoose</h2>
+            <div className="bar">
+              <div className="progress50"></div>
             </div>
           </div>
 
-          <div class="skill">
-            <h2 class="skill-name">MongoDb</h2>
-            <div class="bar">
-              <div class="progress20"></div>
+          <div className="skill">
+            <h2 className="skill-name">MongoDb</h2>
+            <div className="bar">
+              <div className="progress20"></div>
             </div>
           </div>
 
-          <div class="skill">
-            <h2 class="skill-name">jQuery</h2>
-            <div class="bar">
-              <div class="progress80"></div>
+          <div className="skill">
+            <h2 className="skill-name">jQuery</h2>
+            <div className="bar">
+              <div className="progress80"></div>
             </div>
           </div>
         </div>
