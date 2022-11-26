@@ -117,3 +117,9 @@ $bar-bg: #1c1c1c;
     background-position: -10000px 5000px;
   }
 }
+
+@media (max-width: 1407px) {
+  .heading-skills {
+    text-align: center;
+  }
+}
