@@ -1,9 +1,9 @@
 import React from "react";
 import "./CV_Block.scss";
 import { useEffect } from "react";
+import CV_PDF from "./downloadable/Skorin Vladislav.pdf";
 
 function CV_Block() {
-  //TODO: FIX DOWNLOAD FILE
   useEffect(() => {
     (function () {
       const observer = new IntersectionObserver((entries) => {
@@ -27,28 +27,13 @@ function CV_Block() {
     })();
   });
 
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch("./downloadable/pick.jpg").then((response) => {
-      console.log(response);
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob); // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "pick.jpg";
-        alink.click();
-      });
-    });
-  };
-
   return (
     <div className="cv-block">
       <div className="corner-border"> </div>
       <div className="bottom-corner"></div>
       <div className="container-button">
         <h1 className="cv-text">Checkout my resume</h1>
-        <a href=".downloadable/pick.jpg" download>
+        <a href={CV_PDF} target="_blank" rel="noreferrer">
           <button className="download-btn" type="button">
             My resume
           </button>
