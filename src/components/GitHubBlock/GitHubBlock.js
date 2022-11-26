@@ -1,15 +1,12 @@
 import React from "react";
 import "./GitHubBlock.scss";
-import { useEffect } from "react";
+import $ from "jquery";
 
 function GitHubBlock() {
-  useEffect(() => {});
-
   const playAnimation = () => {
-    const a = document.getElementById("animatedSrc");
-    a.classList.add("a-animation");
-    a.addEventListener("animationend", () => {
-      a.classList.remove("a-animation");
+    $("#animatedSrc").addClass("a-animation");
+    $("#animatedSrc").on("animationend", () => {
+      $(this).removeClass("a-animation");
     });
   };
 
