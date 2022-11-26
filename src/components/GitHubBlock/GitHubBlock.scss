@@ -1,0 +1,115 @@
+.sky {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.stars {
+  background: #000 url("./images/stars.png") repeat top center;
+  z-index: 0;
+}
+
+.twinkling {
+  background: transparent url("./images/twinkling.png") repeat top center;
+  z-index: 1;
+  animation: move-twinkling 450s linear infinite;
+}
+
+.title a {
+  color: white;
+  font-size: 5em;
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  text-shadow: 0 0.1em 0 black, 0 0.125em 0 white; /*?remove*/
+  display: block;
+  position: relative;
+  z-index: 3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  transition: all 0.5s linear;
+  animation: rotation 4.5s linear 0.1s infinite;
+}
+
+.title a:hover {
+  cursor: pointer;
+  text-shadow: none;
+  transition: all 0.4s linear;
+}
+
+.a-animation {
+  cursor: pointer;
+  animation: text-shadow 1.5s ease-in-out !important;
+  transition: all 0.4s linear;
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(1.5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(-1.4deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes move-twinkling {
+  from {
+    background-position: 0, 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes text-shadow {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+  }
+
+  20% {
+    transform: translateY(-1em);
+    text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b,
+      0 -0.25em 0 #fefc4b;
+  }
+
+  40% {
+    transform: translateY(0.5em);
+    text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd,
+      0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+  }
+
+  60% {
+    transform: translateY(-0.25em);
+    text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd,
+      0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+  }
+
+  80% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+  }
+}

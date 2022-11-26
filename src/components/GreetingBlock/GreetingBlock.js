@@ -29,8 +29,8 @@ function GreetingBlock() {
    */
   return (
     <>
-      <div class="container">
-        <div class="animated-heading">
+      <div className="container">
+        <div className="animated-heading">
           <h1 id="words"></h1>
         </div>
       </div>
